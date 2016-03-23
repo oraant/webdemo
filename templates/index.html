@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+
+        <title>call script from web</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+        <link href="./static/bootstrap-3.3.6-dist/css/bootstrap.min.css" rel="stylesheet" />
+        <script src="./static/jquery-1.11.1-dist/jquery.min.js"></script>
+        <script src="./static/bootstrap-3.3.6-dist/js/bootstrap.min.js"></script>
+
+
+    </head>
+
+    <body>
+
+        <div class="row-fluid">
+        <div class="span12">
+            <div class="jumbotron well">
+                <h1>
+                    超大屏幕标题
+                </h1>
+                <p class="lead">
+                    这是一个可视化布局模板, 你可以点击模板里的文字进行修改, 也可以通过点击弹出的编辑框进行富文本修改. 拖动区块能实现排序.
+                </p>
+                <p>
+                    <a class="btn btn-lg btn-success" href="#" role="button">登陆</a>
+                </p>
+            </div>
+        </div>
+        </div>
+
+        <div class="container-fluid">
+
+            <div class="row-fluid">
+
+                <div class="col-md-3">
+                    <button id="iostat"     class="btn btn-block btn-primary"   type="button">iostat    </button>
+                    <button id="iostat-d"   class="btn btn-block btn-info"      type="button">iostat -d </button>
+                    <button id="iostat-c"   class="btn btn-block btn-success"   type="button">iostat -c </button>
+                    <button id="uptime"     class="btn btn-block btn-warning"   type="button">uptime    </button>
+                    <button id="who"        class="btn btn-block btn-danger"    type="button">who       </button>
+                </div>
+
+                <div class="col-md-9">
+                    <pre>{{ content|safe }}</pre>
+                </div>
+
+            </div>
+
+        </div>
+
+    </body>
+
+    <script>
+        document.getElementById("iostat").onclick=function(){window.location.href='/iostat'};
+        document.getElementById("iostat-d").onclick=function(){window.location.href='/iostat-d'};
+        document.getElementById("iostat-c").onclick=function(){window.location.href='/iostat-c'};
+        document.getElementById("uptime").onclick=function(){window.location.href='/uptime'};
+        document.getElementById("who").onclick=function(){window.location.href='/who'};
+    </script>
+
+</html>
