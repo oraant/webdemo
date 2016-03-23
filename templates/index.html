@@ -6,9 +6,9 @@
         <title>call script from web</title>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
-        <link href="./static/bootstrap-3.3.6-dist/css/bootstrap.min.css" rel="stylesheet" />
-        <script src="./static/jquery-1.11.1-dist/jquery.min.js"></script>
-        <script src="./static/bootstrap-3.3.6-dist/js/bootstrap.min.js"></script>
+        <link href="/static/bootstrap-3.3.6-dist/css/bootstrap.min.css" rel="stylesheet" />
+        <script src="/static/jquery-1.11.1-dist/jquery.min.js"></script>
+        <script src="/static/bootstrap-3.3.6-dist/js/bootstrap.min.js"></script>
 
     </head>
 
@@ -35,15 +35,17 @@
             <div class="row-fluid">
 
                 <div class="col-md-3">
-                    <a href='/iostat'   class="btn btn-block btn-primary"   type="button">iostat    </a>
-                    <a href='/iostat-d' class="btn btn-block btn-info"      type="button">iostat -d </a>
-                    <a href='/iostat-c' class="btn btn-block btn-success"   type="button">iostat -c </a>
-                    <a href='/uptime'   class="btn btn-block btn-warning"   type="button">uptime    </a>
-                    <a href='/who'      class="btn btn-block btn-danger"    type="button">who       </a>
+                    <a href='/iostat'       class="btn btn-block btn-primary"   type="button">iostat    </a>
+                    <a href='/iostat/-d'    class="btn btn-block btn-info"      type="button">iostat -d </a>
+                    <a href='/iostat/-c'    class="btn btn-block btn-success"   type="button">iostat -c </a>
+                    <a href='/uptime'       class="btn btn-block btn-warning"   type="button">uptime    </a>
+                    <a href='/who'          class="btn btn-block btn-danger"    type="button">who       </a>
+                    <a href='/db_db'        class="btn btn-block btn-primary"   type="button">db_db     </a>
+                    <a href='/db_help'      class="btn btn-block btn-info"      type="button">db_help   </a>
                 </div>
 
                 <div class="col-md-9">
-                    <pre>{{ content|safe }}</pre>
+                    {{ content|safe }}
                 </div>
 
             </div>
