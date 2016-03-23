@@ -10,7 +10,6 @@
         <script src="./static/jquery-1.11.1-dist/jquery.min.js"></script>
         <script src="./static/bootstrap-3.3.6-dist/js/bootstrap.min.js"></script>
 
-
     </head>
 
     <body>
@@ -36,11 +35,11 @@
             <div class="row-fluid">
 
                 <div class="col-md-3">
-                    <button id="iostat"     class="btn btn-block btn-primary"   type="button">iostat    </button>
-                    <button id="iostat-d"   class="btn btn-block btn-info"      type="button">iostat -d </button>
-                    <button id="iostat-c"   class="btn btn-block btn-success"   type="button">iostat -c </button>
-                    <button id="uptime"     class="btn btn-block btn-warning"   type="button">uptime    </button>
-                    <button id="who"        class="btn btn-block btn-danger"    type="button">who       </button>
+                    <a href='/iostat'   class="btn btn-block btn-primary"   type="button">iostat    </a>
+                    <a href='/iostat-d' class="btn btn-block btn-info"      type="button">iostat -d </a>
+                    <a href='/iostat-c' class="btn btn-block btn-success"   type="button">iostat -c </a>
+                    <a href='/uptime'   class="btn btn-block btn-warning"   type="button">uptime    </a>
+                    <a href='/who'      class="btn btn-block btn-danger"    type="button">who       </a>
                 </div>
 
                 <div class="col-md-9">
@@ -52,13 +51,5 @@
         </div>
 
     </body>
-
-    <script>
-        document.getElementById("iostat").onclick=function(){window.location.href='/iostat'};
-        document.getElementById("iostat-d").onclick=function(){window.location.href='/iostat-d'};
-        document.getElementById("iostat-c").onclick=function(){window.location.href='/iostat-c'};
-        document.getElementById("uptime").onclick=function(){window.location.href='/uptime'};
-        document.getElementById("who").onclick=function(){window.location.href='/who'};
-    </script>
 
 </html>
